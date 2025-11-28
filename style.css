@@ -60,3 +60,67 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.cat-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+.cat {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+  
+.cat:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+
+.piano {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+  
+.key {
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    user-select: none;
+}
+  
+.white {
+    width: 40px;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+  
+.black {
+    width: 25px;
+    background: black;
+    color: transparent;
+    position: absolute;
+    z-index: 2;
+}
+  
+  /* Позиции чёрных клавиш */
+[data-note="C#"] { left: 188px; }
+[data-note="D#"] { left: 228px; }
+[data-note="F#"] { left: 308px; }
+[data-note="G#"] { left: 348px; }
+[data-note="A#"] { left: 388px; }
+  
+
+.key.active {
+    background-color: #ff9800 !important; /* Оранжевый при нажатии */
+    transform: translateY(2px);
+}
